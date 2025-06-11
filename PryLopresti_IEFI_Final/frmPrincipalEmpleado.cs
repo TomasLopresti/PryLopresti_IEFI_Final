@@ -23,7 +23,7 @@ namespace PryLopresti_IEFI_Final
             this.usuario = usuario;
             this.horaIngreso = horaIngreso;
             this.idRegistro = idRegistro;
-            //lblBienvenida.Text = "Bienvenido " + usuario; // suponiendo que tenés un labe
+            //lblBienvenida.Text = "Bienvenido " + usuario; 
         }
         clsConexión Conexión = new clsConexión();
         private void frmPrincipalEmpleado_Load(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace PryLopresti_IEFI_Final
             using (OleDbConnection conexion = new OleDbConnection(
                 @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\ControlDeUsuarios.accdb"))
             {
-                // Usamos ? y pasamos los parámetros en orden
+                
                 string consulta = "UPDATE Registros SET HoraEgreso = ?, TiempoTranscurrido = ? WHERE idRegistro = ?";
 
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))

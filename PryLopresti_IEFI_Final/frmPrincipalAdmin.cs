@@ -50,7 +50,7 @@ namespace PryLopresti_IEFI_Final
             using (OleDbConnection conexion = new OleDbConnection(
                 @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\ControlDeUsuarios.accdb"))
             {
-                // Usamos ? y pasamos los parámetros en orden
+                
                 string consulta = "UPDATE Registros SET HoraEgreso = ?, TiempoTranscurrido = ? WHERE idRegistro = ?";
 
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))

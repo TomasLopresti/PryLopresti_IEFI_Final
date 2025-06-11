@@ -179,7 +179,7 @@ namespace PryLopresti_IEFI_Final
                 dgvMostrar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvMostrar.RowHeadersVisible = false;
 
-                // Colorear booleanos
+                
                 foreach (DataGridViewRow fila in dgvMostrar.Rows)
                 {
                     foreach (string campo in new[] { "Insumos", "Estudio", "Vacaciones", "Salario", "Recibo" })

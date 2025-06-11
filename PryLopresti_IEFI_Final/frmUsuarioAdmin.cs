@@ -28,7 +28,7 @@ namespace PryLopresti_IEFI_Final
 
         private void dgvMostrar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Evita que cambie si selecciona el encabezado
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow fila = dgvMostrar.Rows[e.RowIndex];
 
@@ -213,7 +213,7 @@ namespace PryLopresti_IEFI_Final
             string direccion = txtDireccion.Text.Trim();
             string cargo = cmbCargo.Text;
 
-            // Validar campos vacíos
+            
             if (string.IsNullOrWhiteSpace(usuario) ||
                 string.IsNullOrWhiteSpace(contraseña) ||
                 string.IsNullOrWhiteSpace(dni) ||
@@ -226,28 +226,28 @@ namespace PryLopresti_IEFI_Final
                 return false;
             }
 
-            // Contraseña mínima
+            
             if (contraseña.Length < 6)
             {
                 mensaje = "La contraseña debe tener al menos 6 caracteres.";
                 return false;
             }
 
-            // Validar DNI (solo números y longitud 8 o 9)
+            
             if (!dni.All(char.IsDigit) || (dni.Length != 8 && dni.Length != 9))
             {
                 mensaje = "El DNI debe tener solo números y tener 8 o 9 dígitos.";
                 return false;
             }
 
-            // Validar formato básico de mail
+            
             if (!mail.Contains("@") || !mail.Contains(".") || mail.StartsWith("@") || mail.EndsWith("@"))
             {
                 mensaje = "El correo electrónico ingresado no es válido.";
                 return false;
             }
 
-            // Validar teléfono (solo números)
+            
             if (!telefono.All(char.IsDigit))
             {
                 mensaje = "El teléfono debe contener solo números.";

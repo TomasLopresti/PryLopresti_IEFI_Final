@@ -51,7 +51,7 @@ namespace PryLopresti_IEFI_Final
 
             try
             {
-                // Verificar contraseña actual
+                
                 string consulta = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @usuario AND Contraseña = @contraseñaActual";
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion.conexión))
                 {
@@ -69,7 +69,7 @@ namespace PryLopresti_IEFI_Final
                     }
                 }
 
-                // Actualizar contraseña
+                
                 string actualizar = "UPDATE Usuarios SET Contraseña = @nueva WHERE Usuario = @usuario";
                 using (OleDbCommand comando = new OleDbCommand(actualizar, conexion.conexión))
                 {

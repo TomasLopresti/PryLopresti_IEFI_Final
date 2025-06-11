@@ -13,7 +13,7 @@ namespace PryLopresti_IEFI_Final
 {
     public partial class frmAuditoriasEmpleado : Form
     {
-        private string usuario; // variable para almacenar el usuario
+        private string usuario; 
         private string cadenaConexion = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\ControlDeUsuarios.accdb";
         public frmAuditoriasEmpleado(string usuarioLogueado)
         {

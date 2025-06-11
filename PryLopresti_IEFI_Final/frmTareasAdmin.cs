@@ -36,14 +36,14 @@ namespace PryLopresti_IEFI_Final
             {
                 conexion.Open();
 
-                // Mostrar TAREAS
+                
                 string consultaTareas = "SELECT * FROM Tareas";
                 OleDbDataAdapter adaptadorTareas = new OleDbDataAdapter(consultaTareas, conexion);
                 DataTable tablaTareas = new DataTable();
                 adaptadorTareas.Fill(tablaTareas);
                 dgvTareas.DataSource = tablaTareas;
 
-                // Mostrar LUGARES
+                
                 string consultaLugares = "SELECT * FROM Lugares";
                 OleDbDataAdapter adaptadorLugares = new OleDbDataAdapter(consultaLugares, conexion);
                 DataTable tablaLugares = new DataTable();

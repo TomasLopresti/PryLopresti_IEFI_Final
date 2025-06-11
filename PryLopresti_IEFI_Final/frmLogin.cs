@@ -38,7 +38,7 @@ namespace PryLopresti_IEFI_Final
 
             if (conexión.ValidarCredenciales(usuario, contraseña, cargoSeleccionado))
             {
-                // Guardar hora de ingreso y registro
+                
                 DateTime horaIngreso = DateTime.Now;
                 int idRegistro = 0;
 
@@ -55,7 +55,7 @@ namespace PryLopresti_IEFI_Final
                     comando.CommandText = "SELECT @@IDENTITY";
                     idRegistro = Convert.ToInt32(comando.ExecuteScalar());
                 }
-                // Pasar datos al formulario principal
+                
                 if (cargoSeleccionado == "Administrador")
                 {
                     frmPrincipalAdmin admin = new frmPrincipalAdmin(usuario, horaIngreso, idRegistro);
